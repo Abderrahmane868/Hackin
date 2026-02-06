@@ -1,37 +1,14 @@
 "use client"
 import { useState } from "react"
 import Image from "next/image" 
+
 export default function Signup(){
-  const [show,setShow] = useState("false") 
-  const toggle = () =>{
-    const password = document.getElementById("password")
-    if (password.type === "text"){
-      password.type="password"
-      setShow("false")
-    }
-    else{
-      password.type="text" 
-      setShow("true")  
-    }
+  const [showPassword, setShowPassword] = useState(false) 
+  
+  const toggle = () => {
+    setShowPassword(!showPassword)
   }
-  const noborder1 = () =>{
-    document.getElementById("first").style.outline="none" ; 
-  }
-  const noborder2 = () =>{
-    document.getElementById("last").style.outline="none" ; 
-  }
-  const noborder3 = () =>{
-    document.getElementById("number").style.outline="none" ; 
-  }
-  const noborder4 = () =>{
-    document.getElementById("email").style.outline="none" ;  
-  }
-  const noborder5 = () =>{
-    document.getElementById("password").style.outline="none" ; 
-  }
-  const noborder6 = () =>{
-    document.getElementById("id").style.outline="none" ;  
-  }
+  
   return (
     <>
     <div className=" flex flex-col bg-[#F7F5FA]">
@@ -74,13 +51,37 @@ export default function Signup(){
           
           <div className="mb-11.75 flex flex-col">
             <label className="text-[#666666] text-sm mb-2">Phone number</label>
-            <input  id="number"type="text" className="border-[#666666] border w-full h-14 rounded-xl px-4 focus:outline-0"></input>
+            <div className="relative">
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-x-2">
+                <span className="text-xl"><Image src="/PS.png" width={36} height={26} alt="palestine"  /></span>
+                <span className="text-[#333333]">+970</span>
+              </div>
+              <input id="number" type="text" className="border-[#666666] border w-full h-14 rounded-xl pl-24 pr-4 focus:outline-0"></input>
+            </div>
           </div>
           
           <div className="mb-6 flex flex-col">
             <label className="text-[#666666] text-sm mb-2">Password</label>
-            <input id="password"  type="password" className="border-[#666666] border w-full h-14 rounded-xl px-4 focus:outline-0"></input>
-
+            <div className="relative">
+              <input 
+                id="password" 
+                type={showPassword ? "text" : "password"} 
+                className="border-[#666666] border w-full h-14 rounded-xl px-4 pr-12 focus:outline-0"
+              />
+              <button
+                type="button"
+                onClick={toggle}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#666666] hover:text-[#333333] transition-colors cursor-pointer"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  {!showPassword && (
+                    <line x1="3" y1="3" x2="21" y2="21"></line>
+                  )}
+                </svg>
+              </button>
+            </div>
             <p className="text-xs text-[#666666] mt-2">Use 8 or more characters with a mix of letters, numbers & symbols</p>
           </div>
           
