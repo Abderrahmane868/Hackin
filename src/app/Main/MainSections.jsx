@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen py-16 relative flex items-center justify-center"
+      className="min-h-screen py-16 relative flex items-center justify-center justifyцентр"
     >
       <div className="absolute top-0 left-0 opacity-20">
         <Image
@@ -129,7 +129,10 @@ export function AboutUsSection() {
 }
 export function LearnerSection() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-10 py-20 transition-all duration-500">
+    <section
+      className="min-h-screen flex flex-col items-center justify-center gap-10 py-20 transition-all duration-500"
+      id="learner"
+    >
       <div className="absolute top-50 right-0 ">
         <Image src="/pattern.png" width={180} height={180} alt="Freelancer" />
       </div>
@@ -147,7 +150,7 @@ export function LearnerSection() {
               designed for the real world. Your growth doesn't stop with you —
               every skill you learn helps build a stronger future for Gaza.
             </p>
-            <Link href="/auth/signup">
+            <Link href="/learnerPage">
               <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-14 w-60 bg-purple-500 text-white rounded">
                 get Started
               </button>

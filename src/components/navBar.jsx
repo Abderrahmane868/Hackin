@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./navBar.css";
+import Link from "next/link";
 function NavBar() {
   return (
     <>
@@ -38,7 +39,7 @@ function NavBar() {
                 discover Gaza
               </a>
               <a
-                href="#"
+                href="#learner"
                 className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 Service
@@ -55,6 +56,18 @@ function NavBar() {
               >
                 Charity($)
               </a>
+            </div>
+            <div className="mx-6">
+              <Link href="/auth/signin">
+                <button className="ml-auto bg-[#EDCE73]  px-6 py-2 rounded-lg text-white font-medium hover:bg-yellow-500 transition-all duration-300">
+                  sign in
+                </button>
+              </Link>
+              <Link href="/auth/signup">
+                <button className="ml-4 bg-[#0A033C]  px-6 py-2 rounded-lg text-white font-medium hover:bg-gray-800 transition-all duration-300">
+                  sign up
+                </button>
+              </Link>
             </div>
 
             <button className="ml-auto  px-6 py-2  text-[#0A033C] font-medium ">
