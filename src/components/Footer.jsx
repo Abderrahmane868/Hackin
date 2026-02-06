@@ -31,10 +31,9 @@ export default function Footer() {
             </a>
             <a>
               <Image
-                src="/8.png"
+                src="/instagram.png"
                 width={22}
                 height={22}
-                alt="Instagram"
                 alt="Instagram"
               />{" "}
             </a>

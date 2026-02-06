@@ -11,7 +11,7 @@ function Charity() {
         <div className="flex  items-center ml-6">
           <div className="font-bold text-xl w-1/2">
             <h2 className="h-00 text-4xl pb-5 text-red-600">Nafas</h2>
-            <p className="pb-10">
+            <p className="pb-10">  
               Gaza needs hope. Every day, families face challenges that no one
               should endure. Your donation provides food, shelter, medical care,
               and rebuilding support to those who need it most. Every
@@ -19,11 +19,11 @@ function Charity() {
               to rebuild lives. Stand with Gaza. Give hope. Make a difference.
             </p>
             <Link href="/auth/signup">
-              <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+              <button className="bg-linear-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
                 Donate Now
               </button>
             </Link>
-          </div>
+          </div>  
         </div>
       </div>
       <div>
@@ -43,6 +43,7 @@ function Charity() {
               </h3>
 
               <div className="flex justify-between text-sm mb-2">
+                <span className ="font-semibold">$256,200</span>
                 <span className="font-semibold">$256,200</span>
                 <span className="text-gray-400">$500,000</span>
               </div>
