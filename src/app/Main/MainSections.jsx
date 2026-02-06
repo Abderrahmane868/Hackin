@@ -75,12 +75,14 @@ export function GazaSection() {
         </p>
       </div>
       <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
-        <button
-          className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded"
+        <a
           href="https://www.google.com/maps/place/Gaza"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70 bg-purple-500 text-white rounded flex items-center justify-center px-6 py-3"
         >
           Discover Gaza
-        </button>
+        </a>
       </div>
     </section>
   );
@@ -272,6 +274,5 @@ export function Charity() {
         </Link>
       </div>
     </section>
-
   );
 }
