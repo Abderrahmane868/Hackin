@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CharityNavBar from "../../components/charityNavBar";
+import Footer from "@/src/components/Footer";
 function Charity() {
   return (
     <div>
@@ -34,167 +35,169 @@ function Charity() {
             <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?1"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Community Spaces, Schools, And Local Infrastructure
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$256,200</span>
-                <span class="text-gray-400">$500,000</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$256,200</span>
+                <span className="text-gray-400">$500,000</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/2"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/2"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4">
+            <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?2"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Food And Basic Necessities For Families
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$50,124</span>
-                <span class="text-gray-400">$100,000</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$50,124</span>
+                <span className="text-gray-400">$100,000</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/2"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/2"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4">
+            <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?3"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Emergency Relief And Community Support
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$28,200</span>
-                <span class="text-gray-400">$64,000</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$28,200</span>
+                <span className="text-gray-400">$64,000</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/2"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/2"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4">
+            <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?4"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Medical And Emergency Support
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$50,200</span>
-                <span class="text-gray-400">$100,000</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$50,200</span>
+                <span className="text-gray-400">$100,000</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/2"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/2"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4">
+            <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?5"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Access To Clean Water And Sanitation
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$1,124</span>
-                <span class="text-gray-400">$10,400</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$1,124</span>
+                <span className="text-gray-400">$10,400</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/3"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/3"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4">
+            <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?6"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
-              <h3 class="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-gray-800 mb-3">
                 Rebuilding Homes And Temporary Shelters
               </h3>
 
-              <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold">$530,200</span>
-                <span class="text-gray-400">$1,000,000</span>
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold">$530,200</span>
+                <span className="text-gray-400">$1,000,000</span>
               </div>
 
-              <div class="w-full bg-gray-200 h-1.5 rounded mb-4">
-                <div class="bg-red-400 h-1.5 rounded w-1/2"></div>
+              <div className="w-full bg-gray-200 h-1.5 rounded mb-4">
+                <div className="bg-red-400 h-1.5 rounded w-1/2"></div>
               </div>
 
-              <div class="flex justify-between items-center">
-                <button class="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
+              <div className="flex justify-between items-center">
+                <button className="bg-red-400 text-white px-4 py-2 rounded-md text-sm">
                   Donate now
                 </button>
-                <a class="text-red-400 text-sm">See detail</a>
+                <a className="text-red-400 text-sm">See detail</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
