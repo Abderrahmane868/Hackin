@@ -3,9 +3,9 @@ import { useState } from "react";
 
 function Carousel() {
   const slides = [
-    "https://picsum.photos/id/1015/800/400",
-    "https://picsum.photos/id/1016/800/400",
-    "https://picsum.photos/id/1018/800/400",
+    "/carouselpic/y1.webp",
+    "/carouselpic/y2.jpeg",
+    "/carouselpic/y3.jpg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -16,14 +16,20 @@ function Carousel() {
 
   return (
     <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      {/* Slides */}
-      <img
-        src={slides[index]}
-        alt="carousel"
-        className="w-full h-[400px] object-cover transition-all duration-500"
-      />
+      <div
+        className="flex transform-gpu transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {slides.map((slide, i) => (
+          <img
+            key={i}
+            src={slide}
+            alt="carousel"
+            className="w-full h-[400px] object-cover flex-shrink-0"
+          />
+        ))}
+      </div>
 
-      {/* Buttons */}
       <button
         onClick={prev}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full"
@@ -40,4 +46,5 @@ function Carousel() {
     </div>
   );
 }
+
 export default Carousel;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import NavBar from "@/src/components/navBar";
 import SearchBar from "@/src/components/SearchBar";
 import Carousel from "@/src/components/carousel";
+import Link from "next/link";
 function Main() {
   return (
     <>
@@ -27,9 +28,12 @@ function Main() {
             </p>
           </div>
           <div className="flex justify-between w-full max-w-150 mx-auto">
-            <button className="bg-gradient-to-r from-[#9C4DF4] to-[#5B2D8E] w-50 h-15 px-4 py-2 bg-purple-500 text-white rounded">
-              Get started
-            </button>
+            <Link href="/auth/signup">
+              <button className="bg-gradient-to-r from-[#9C4DF4] to-[#5B2D8E] w-50 h-15 px-4 py-2 bg-purple-500 text-white rounded">
+                Get started
+              </button>
+            </Link>
+            
             <button className="bg-gradient-to-r from-[#9C4DF4] to-[#5B2D8E] px-4 py-2 bg-purple-500 text-white rounded">
               Join as a trainner
             </button>
