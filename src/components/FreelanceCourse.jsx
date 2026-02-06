@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-export default function Courses() {
+export default function FreelanceCourses() {
   const [visible, setVisible] = useState("both");
   const both = () => {
     setVisible("both");
@@ -17,68 +17,69 @@ export default function Courses() {
   const coursesarray = [
     {
       image: "/1.png",
-      name: "Physics",
+      name: "Web & Mobile Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "HTML, CSS, JavaScript, React, Flutter, Node.js, API integration.",
       location: "online",
     },
     {
       image: "/2.png",
-      name: "Maths",
+      name: "Graphic Design & Visual Identity",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "Adobe Photoshop, Illustrator, UI design, branding, typography.",
       location: "online",
     },
     {
       image: "/3.png",
-      name: "Electrical",
+      name: "Architecture & Sustainable Reconstruction",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "AutoCAD, SketchUp, 3D modeling, urban planning, structural engineering.",
       location: "classroom",
     },
     {
       image: "/4.png",
-      name: "Web Dev",
+      name: "Translation & International Communication",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "Arabic/English translation, subtitling, technical writing, proofreading.",
       location: "online",
     },
     {
       image: "/5.png",
-      name: "Mansory",
+      name: "Digital Marketing & Social Strategy",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
-      location: "classroom",
+        "SEO, social media management, content strategy, Google Ads, copywriting.",
+      location: "online",
     },
     {
       image: "/6.png",
-      name: "CyberSecurity",
+      name: "E-Learning & Online Tutoring",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "Moodle design, digital pedagogy, educational content creation.",
       location: "online",
     },
     {
       image: "/7.png",
-      name: "UI/UX",
+      name: "Digital Craft & Cultural Heritage",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
-      location: "online",
+        "Website development, database management, digital archiving.",
+      location: "classroom",
     },
     {
       image: "/8.png",
-      name: "Plumbing",
+      name: "Data Analysis & Project Management",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
-      location: "classroom",
+        "Advanced Excel, SQL, data visualization, Agile methodology.",
+      location: "online",
     },
     {
       image: "/9.png",
-      name: "English",
+      name: "Renewable Energy & Low-Tech Engineering",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestiae, unde dolorum possimus beatae, ",
+        "Solar panel installation, electrical maintenance, water filtration, circuit design.",
       location: "classroom",
     },
   ];
+
   const trainersarray = [
     {
       name: "Ahmed Ben Ali",
@@ -131,7 +132,7 @@ export default function Courses() {
   ];
   return (
     <div className="pl-20 pr-20">
-      <div className=" bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
+      <div className="pl-20 pr-20  bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
         <div className="flex flex-row justify-between items-center h-20 ">
           <div className="flex flex-row">
             <Image src="/logo.png" height={20} width={40} alt="logo" />
@@ -158,8 +159,9 @@ export default function Courses() {
               className="-mt-12 cursor-pointer"
             />
           </Link>
+
           <p className="text-[45px]  pl-39.75   font-semibold text-[#0A033C]">
-            Nafas Courses
+            Skill Up for Gaza
             <br />
             For You{" "}
           </p>

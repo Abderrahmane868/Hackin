@@ -30,7 +30,7 @@ export default function Signup() {
 
   return (
     <>
-      <div className="bg-[#F7F5FA] flex flex-col ">
+      <div className="bg-[#F7F5FA] flex flex-col pb-10 ">
         <div className="pt-8 flex flex-row gap-x-1.5 ml-8">
           <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
           <h1 className="font-semibold text-3xl text-[#0A033C]">NAFAS</h1>
