@@ -43,6 +43,18 @@ function Main() {
           <div>
             <Carousel />
           </div>
+          <div className="max-w-300 mx-auto text-center space-y-6">
+            <p>
+              Gaza is a land of resilience, creativity, and hope. Despite years
+              of challenges, its people continue to dream, create, and build a
+              brighter future.
+            </p>
+          </div>
+          <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
+            <button className="bg-gradient-to-r from-[#9C4DF4] to-[#5B2D8E] h-15 w-70  bg-purple-500 text-white rounded">
+              Discover Gaza
+            </button>
+          </div>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
- function Carousel() {
+function Carousel() {
   const slides = [
     "https://picsum.photos/id/1015/800/400",
     "https://picsum.photos/id/1016/800/400",
@@ -10,15 +10,12 @@ import { useState } from "react";
 
   const [index, setIndex] = useState(0);
 
-  const prev = () =>
-    setIndex((index - 1 + slides.length) % slides.length);
+  const prev = () => setIndex((index - 1 + slides.length) % slides.length);
 
-  const next = () =>
-    setIndex((index + 1) % slides.length);
+  const next = () => setIndex((index + 1) % slides.length);
 
   return (
     <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-
       {/* Slides */}
       <img
         src={slides[index]}
