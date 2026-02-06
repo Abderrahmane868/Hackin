@@ -1,13 +1,7 @@
 "use client";
 import { useState } from "react";
 
-function Carousel() {
-  const slides = [
-    "/carouselpic/y1.webp",
-    "/carouselpic/y2.jpeg",
-    "/carouselpic/y3.jpg",
-  ];
-
+function Carousel({ slides }) {
   const [index, setIndex] = useState(0);
 
   const prev = () => setIndex((index - 1 + slides.length) % slides.length);

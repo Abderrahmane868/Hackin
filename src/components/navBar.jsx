@@ -20,19 +20,19 @@ function NavBar() {
 
             <div className="flex gap-8 align-middle ml-auto">
               <a
-                href="/dashboard"
+                href="#home"
                 className="text-[#EDCE73] font-medium  transition"
               >
                 Home
               </a>
               <a
-                href="#"
+                href="#about"
                 className="text-[#0A033C] font-medium transition"
               >
                 About us
               </a>
               <a
-                href="#"
+                href="#gaza"
                 className="text-[#0A033C] font-medium hover:text-blue-700 transition"
               >
                 discover Gaza

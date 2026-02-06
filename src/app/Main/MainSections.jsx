@@ -4,7 +4,7 @@ import Carousel from "@/src/components/carousel";
 import Link from "next/link";
 export function HeroSection() {
   return (
-    <section className="h-screen pt-15">
+    <section id="home" className="h-screen pt-15">
       <div className="MainContent flex flex-col items-center mx-auto w-full gap-12 py-8">
         <div className="max-w-300 mx-auto text-center space-y-6">
           <h1 className="text-5xl font-bold text-[#0A033C]">
@@ -33,13 +33,21 @@ export function HeroSection() {
 }
 
 export function GazaSection() {
+  const slides = [
+    "/carouselpic/y1.webp",
+    "/carouselpic/y2.jpeg",
+    "/carouselpic/y3.jpg",
+  ];
   return (
-    <section className="h-screen flex flex-col items-center justify-center gap-12 py-10">
+    <section
+      id="gaza"
+      className="h-screen flex flex-col items-center justify-center gap-12 py-10"
+    >
       <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
         Discover Gaza
       </h1>
       <div>
-        <Carousel />
+        <Carousel slides={slides} />
       </div>
       <div className="max-w-300 mx-auto text-center space-y-6">
         <p className="text-xl">
@@ -49,7 +57,10 @@ export function GazaSection() {
         </p>
       </div>
       <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
-        <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+        <button
+          className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded"
+          href="https://www.google.com/maps/place/Gaza"
+        >
           Discover Gaza
         </button>
       </div>
@@ -59,13 +70,13 @@ export function GazaSection() {
 
 export function AboutUsSection() {
   return (
-    <section className=" aboutUs h-screen">
-      <div className="max-w-300 mx-auto text-center space-y-6">
-        <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
+    <section id="about" className=" aboutUs h-screen">
+      <div className="max-w-300 mx-auto text-center">
+        <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-15">
           About Us
         </h1>
-        <div className="flex flex-row gap-x-4 justify-center items-center pt-0 mt-0">
-          <p className="font-bold text-xl w-1/2">
+        <div className="flex flex-row gap-x-4 justify-center items-center gap-4 pt-0 mt-0">
+          <p className="font-bold text-xl w-1/2 mr-20">
             Nafas, the platform where learning and working come together.
             Whether you want to learn a new skill, teach others, or offer your
             services as a freelancer, Nafas gives you the tools to grow and
@@ -74,7 +85,12 @@ export function AboutUsSection() {
             in rebuilding Gaza.
           </p>
           <div>
-            <Image src="/aboutUs.png" width={500} height={500} alt="About Us" />
+            <Image
+              src="/Group 7634.png"
+              width={350}
+              height={350}
+              alt="About Us"
+            />
           </div>
         </div>
       </div>
@@ -176,5 +192,39 @@ export function Freelancer() {
         </div>
       </div>
     </section>
+  );
+}
+export function Charity() {
+  const meserable = [
+    "/carouselpic/y1.webp",
+    "/carouselpic/y2.jpeg",
+    "/carouselpic/y3.jpg",
+  ];
+  return (
+    <section
+      id="gaza"
+      className="h-screen flex flex-col items-center justify-center gap-12 py-10 "
+    >
+      <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">charity</h1>
+      <div>
+        <Carousel slides={meserable} />
+      </div>
+      <div className="max-w-300 mx-auto text-center space-y-6">
+        <p className="text-xl">
+          Gaza is a land of resilience, creativity, and hope. Despite years of
+          challenges, its people continue to dream, create, and build a brighter
+          future.
+        </p>
+      </div>
+      <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
+        <button
+          className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded"
+          href="https://www.google.com/maps/place/Gaza"
+        >
+          More details
+        </button>
+      </div>
+    </section>
+   
   );
 }

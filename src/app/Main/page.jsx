@@ -7,6 +7,7 @@ import {
   LearnerSection,
   Trainer,
   Freelancer,
+  Charity,
 } from "./MainSections";
 import Footer from "../../components/Footer";
 function Main() {
@@ -21,6 +22,8 @@ function Main() {
         <LearnerSection />
         <Trainer />
         <Freelancer />
+        <Charity />
+        <section className="h-10"></section>
         <Footer />
       </div>
     </>
