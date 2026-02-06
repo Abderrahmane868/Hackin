@@ -30,7 +30,7 @@ export default function Signin() {
           </div>
 
           <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-[#0A033C]">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-[#333333]">
               Sign in
             </h2>
 
@@ -65,7 +65,7 @@ export default function Signin() {
                 />
                 <button
                   type="button"
-                  className="text-sm text-[#9C4DF4] hover:text-[#8a3de0] text-right mt-2 transition-colors"
+                  className="text-sm cursor-pointer text-[#9C4DF4] hover:text-[#8a3de0] text-right mt-2 transition-colors"
                 >
                   Forgot password?
                 </button>
@@ -73,18 +73,16 @@ export default function Signin() {
 
               <button
                 type="submit"
-                className="w-full h-14 bg-[#9C4DF4] hover:bg-[#8a3de0] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
+                className="cursor-pointer w-full h-14 bg-[#9C4DF4] hover:bg-[#8a3de0] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
               >
                 Sign in
               </button>
 
               <p className="text-center text-base text-gray-600 mt-6">
                 Don't have an account?{" "}
-                <Link href="/auth/signup">
-                  <span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
-                    Sign up
-                  </span>
-                </Link>
+                <span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
+                  Sign up
+                </span>
               </p>
             </div>
           </div>
