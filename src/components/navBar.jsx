@@ -21,13 +21,13 @@ function NavBar() {
             <div className="flex gap-8 align-middle ml-auto">
               <a
                 href="/dashboard"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#EDCE73] font-medium  transition"
               >
                 Home
               </a>
               <a
                 href="#"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#0A033C] font-medium transition"
               >
                 About us
               </a>
