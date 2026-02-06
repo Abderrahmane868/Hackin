@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CharityNavBar from "../../components/charityNavBar";
+import Footer from "@/src/components/Footer";
 function Charity() {
   return (
     <div>
@@ -34,7 +35,7 @@ function Charity() {
             <div className="bg-white rounded-xl shadow p-4">
               <img
                 src="https://picsum.photos/400/250?1"
-                class="rounded-lg mb-4 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
               <h3 className="font-semibold text-gray-800 mb-3">
@@ -43,6 +44,7 @@ function Charity() {
 
               <div className="flex justify-between text-sm mb-2">
                 <span className ="font-semibold">$256,200</span>
+                <span className="font-semibold">$256,200</span>
                 <span className="text-gray-400">$500,000</span>
               </div>
 
@@ -195,6 +197,8 @@ function Charity() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

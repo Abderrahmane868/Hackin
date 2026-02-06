@@ -33,11 +33,10 @@ export function HeroSection() {
           <SearchBar />
         </div>
         <Link href="/charity">
-        <button className="text-center w-100 p-6 m-5  mx-auto text-[#FF6652] font-medium bg-white rounded-2xl shadow-[0_0_10px_2px_rgba(255,0,0,0.7)] hover:shadow-[0_0_15px_4px_rgba(255,0,0,0.9)] transition-shadow">
-          Donate to Gaza
-        </button>
+          <button className="text-center w-100 p-6 m-5  mx-auto text-[#FF6652] font-medium bg-white rounded-2xl shadow-[0_0_10px_2px_rgba(255,0,0,0.7)] hover:shadow-[0_0_15px_4px_rgba(255,0,0,0.9)] transition-shadow">
+            Donate to Gaza
+          </button>
         </Link>
-        
       </div>
     </section>
   );
@@ -266,13 +265,13 @@ export function Charity() {
         </p>
       </div>
       <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
-        <button
-          className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded"
-          href="https://www.google.com/maps/place/Gaza"
-        >
-          More details
-        </button>
+        <Link href="/charity">
+          <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+            More details
+          </button>
+        </Link>
       </div>
     </section>
+
   );
 }
