@@ -80,9 +80,11 @@ export default function Signin() {
 
               <p className="text-center text-base text-gray-600 mt-6">
                 Don't have an account?{" "}
-                <span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
-                  Sign up
-                </span>
+                <Link href="/auth/signup">
+                  <span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
+                    Sign up
+                  </span>
+                </Link>
               </p>
             </div>
           </div>

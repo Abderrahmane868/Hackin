@@ -13,7 +13,6 @@ export default function Signup() {
   });
 
   const handleSignup = () => {
- 
     if (
       !user.firstName ||
       !user.lastName ||
@@ -27,15 +26,13 @@ export default function Signup() {
     }
 
     localStorage.setItem("userData", JSON.stringify(user));
-
-   
   };
 
   return (
     <>
       <div className="bg-amber-200 flex flex-col ">
         <div className="pt-10.75 flex flex-row gap-x-1.5 ml-18">
-          <Image src="/icon.png" width={30} height={25} />
+          <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
           <h1 className="font-semibold text-3xl text-[#0A033C]">NAFAS</h1>
         </div>
         <div className="bg-amber-400 flex flex-row justify-between pt-16 pb-16 pr-10.5 pl-17">
@@ -46,7 +43,12 @@ export default function Signup() {
               <br></br>
               Nafas Platform
             </h1>
-            <Image src="/OBJECTS.png" height={452} width={456} />
+            <Image
+              src="/OBJECTS.png"
+              height={452}
+              width={456}
+              alt="Welcome illustration"
+            />
           </div>
           <div className="bg-white border rounded-3xl h-218 border-[#666666] pt-12 pb-35.5 pl-22 pr-37.5 ">
             <h1 className="text-[32px] font-medium mb-8">Sign up now</h1>
@@ -130,7 +132,10 @@ export default function Signup() {
             <div className="flex flex-row justify-between items-center mt-8">
               <button
                 className="w-41 h-16 cursor-pointer bg-[#9C4DF4] rounded-[40px] text-[22px] font-medium text-white"
-                onClick={handleSignup}
+                onClick={() => {
+                  handleSignup();
+                  console.log(user);
+                }}
               >
                 Sign up
               </button>
