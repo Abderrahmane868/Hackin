@@ -5,8 +5,10 @@ import {
   GazaSection,
   AboutUsSection,
   LearnerSection,
+  Trainer,
+  Freelancer,
 } from "./MainSections";
-
+import Footer from "../../components/Footer";
 function Main() {
   return (
     <>
@@ -17,6 +19,9 @@ function Main() {
         <AboutUsSection />
         <GazaSection />
         <LearnerSection />
+        <Trainer />
+        <Freelancer />
+        <Footer />
       </div>
     </>
   );

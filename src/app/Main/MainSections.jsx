@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SearchBar from "@/src/components/SearchBar";
 import Carousel from "@/src/components/carousel";
-
+import Link from "next/link";
 export function HeroSection() {
   return (
     <section className="h-screen pt-15">
@@ -56,11 +56,6 @@ export function GazaSection() {
     </section>
   );
 }
-export function LearnerSection() {
-  return (
-    <section className="h-screen flex flex-col items-center justify-center gap-12 py-10"></section>
-  );
-}
 
 export function AboutUsSection() {
   return (
@@ -80,6 +75,103 @@ export function AboutUsSection() {
           </p>
           <div>
             <Image src="/aboutUs.png" width={500} height={500} alt="About Us" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function LearnerSection() {
+  return (
+    <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+      <div className="max-w-300 mx-auto text-center space-y-6">
+        <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
+          Learner
+        </h1>
+        <div className="flex flex-row justify-center items-center pt-0 mt-0">
+          <div className="font-bold text-xl w-1/2">
+            <h2 className="h-00 text-4xl pb-5">
+              Build Your Future with Your Own Hands!
+            </h2>
+            <p className="pb-10">
+              As a Learner, you gain practical skills that lead to real
+              opportunities. From vocational trades to digital skills, Nafas
+              connects you with experienced trainers and hands-on learning paths
+              designed for the real world. Your growth doesn't stop with you —
+              every skill you learn helps build a stronger future for Gaza.
+            </p>
+            <Link href="/auth/signup">
+              <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+                get Started
+              </button>
+            </Link>
+          </div>
+          <div>
+            <Image src="/learner.png" width={500} height={500} alt="Learner" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function Trainer() {
+  return (
+    <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+      <div className="max-w-300 mx-auto text-center space-y-6">
+        <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
+          Learner
+        </h1>
+        <div className="flex flex-row justify-center items-center pt-0 mt-0">
+          <div>
+            <Image src="/trainner.png" width={400} height={400} alt="Trainer" />
+          </div>
+          <div className="font-bold text-xl w-1/2">
+            <h2 className="h-00 text-4xl pb-5">
+              Train Today. Change Tomorrow.
+            </h2>
+            <p className="pb-10">
+              As a Trainer, your knowledge becomes a force for change. Teach
+              practical skills, mentor motivated learners, and earn while making
+              a meaningful difference. On Nafas, every lesson you share helps
+              empower individuals and contributes directly to rebuilding
+              communities in Gaza.
+            </p>
+            <Link href="/auth/verification">
+              <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+                Join as a trainer
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function Freelancer() {
+  return (
+    <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+      <div className="max-w-300 mx-auto text-center space-y-6">
+        <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
+          Freelancer
+        </h1>
+        <div className="flex flex-row justify-center items-center pt-0 mt-0">
+          <div className="font-bold text-xl w-1/2">
+            <h2 className="h-00 text-4xl pb-5">Put Your Skills to Work</h2>
+            <p className="pb-10">
+              As a Freelancer, you turn your skills into real work. Showcase
+              your services, connect with clients, and get paid for your
+              expertise — all while supporting a greater cause. Every project
+              you complete on Nafas helps fund learning, employment, and
+              rebuilding efforts in Gaza.
+            </p>
+            <Link href="/auth/signup">
+              <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-15 w-70  bg-purple-500 text-white rounded">
+                Become a freelance
+              </button>
+            </Link>
+          </div>
+          <div>
+            <Image src="/learner.png" width={500} height={500} alt="Learner" />
           </div>
         </div>
       </div>
