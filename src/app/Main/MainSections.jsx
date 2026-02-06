@@ -4,7 +4,15 @@ import Carousel from "@/src/components/carousel";
 import Link from "next/link";
 export function HeroSection() {
   return (
-    <section id="home" className="h-screen pt-15">
+    <section id="home" className="h-screen pt-15 relative">
+      <div className="absolute top-0 left-0 opacity-20">
+        <Image
+          src="/Pattern.png"
+          width={150}
+          height={150}
+          alt="Pattern decoration"
+        />
+      </div>
       <div className="MainContent flex flex-col items-center mx-auto w-full gap-12 py-8">
         <div className="max-w-300 mx-auto text-center space-y-6">
           <h1 className="text-5xl font-bold text-[#0A033C]">
@@ -24,9 +32,12 @@ export function HeroSection() {
         <div>
           <SearchBar />
         </div>
+        <Link href="/charity">
         <button className="text-center w-100 p-6 m-5  mx-auto text-[#FF6652] font-medium bg-white rounded-2xl shadow-[0_0_10px_2px_rgba(255,0,0,0.7)] hover:shadow-[0_0_15px_4px_rgba(255,0,0,0.9)] transition-shadow">
           Donate to Gaza
         </button>
+        </Link>
+        
       </div>
     </section>
   );
@@ -41,8 +52,16 @@ export function GazaSection() {
   return (
     <section
       id="gaza"
-      className="h-screen flex flex-col items-center justify-center gap-12 py-10"
+      className="h-screen flex flex-col items-center justify-center gap-12 py-10 relative"
     >
+      <div className="absolute top-20 right-5 opacity-20">
+        <Image
+          src="/Pattern.png"
+          width={160}
+          height={160}
+          alt="Pattern decoration"
+        />
+      </div>
       <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
         Discover Gaza
       </h1>
@@ -70,7 +89,15 @@ export function GazaSection() {
 
 export function AboutUsSection() {
   return (
-    <section id="about" className=" aboutUs h-screen">
+    <section id="about" className=" aboutUs h-screen relative">
+      <div className="absolute bottom-10 right-10 opacity-25">
+        <Image
+          src="/Pattern.png"
+          width={180}
+          height={180}
+          alt="Pattern decoration"
+        />
+      </div>
       <div className="max-w-300 mx-auto text-center">
         <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-15">
           About Us
@@ -100,6 +127,9 @@ export function AboutUsSection() {
 export function LearnerSection() {
   return (
     <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+      <div className="absolute top-50 right-0 ">
+        <Image src="/pattern.png" width={200} height={200} alt="Freelancer" />
+      </div>
       <div className="max-w-300 mx-auto text-center space-y-6">
         <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
           Learner
@@ -132,7 +162,15 @@ export function LearnerSection() {
 }
 export function Trainer() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+    <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20 relative">
+      <div className="absolute bottom-20 left-10 opacity-25">
+        <Image
+          src="/Pattern.png"
+          width={170}
+          height={170}
+          alt="Pattern decoration"
+        />
+      </div>
       <div className="max-w-300 mx-auto text-center space-y-6">
         <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
           Learner
@@ -166,6 +204,9 @@ export function Trainer() {
 export function Freelancer() {
   return (
     <section className="h-screen flex flex-col items-center justify-center gap-12 pt-20">
+      <div className="absolute bottom-0 left-0 opacity-30">
+        <Image src="/pattern.png" width={200} height={200} alt="Freelancer" />
+      </div>
       <div className="max-w-300 mx-auto text-center space-y-6">
         <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">
           Freelancer
@@ -203,8 +244,16 @@ export function Charity() {
   return (
     <section
       id="gaza"
-      className="h-screen flex flex-col items-center justify-center gap-12 py-10 "
+      className="h-screen flex flex-col items-center justify-center gap-12 py-10 relative"
     >
+      <div className="absolute top-10 left-10 opacity-20">
+        <Image
+          src="/Pattern.png"
+          width={150}
+          height={150}
+          alt="Pattern decoration"
+        />
+      </div>
       <h1 className="text-5xl font-bold text-[#0A033C] pt-15 pb-0">charity</h1>
       <div>
         <Carousel slides={meserable} />
@@ -225,6 +274,5 @@ export function Charity() {
         </button>
       </div>
     </section>
-   
   );
 }
