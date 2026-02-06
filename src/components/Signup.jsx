@@ -14,7 +14,24 @@ export default function Signup(){
       setShow("true")  
     }
   }
-  
+  const noborder1 = () =>{
+    document.getElementById("first").style.outline="none" ; 
+  }
+  const noborder2 = () =>{
+    document.getElementById("last").style.outline="none" ; 
+  }
+  const noborder3 = () =>{
+    document.getElementById("number").style.outline="none" ; 
+  }
+  const noborder4 = () =>{
+    document.getElementById("email").style.outline="none" ;  
+  }
+  const noborder5 = () =>{
+    document.getElementById("password").style.outline="none" ; 
+  }
+  const noborder6 = () =>{
+    document.getElementById("id").style.outline="none" ;  
+  }
   return (
     <>
     <div className=" flex flex-col bg-[#F7F5FA]">
