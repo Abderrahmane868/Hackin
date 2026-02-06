@@ -21,37 +21,37 @@ function NavBar() {
             <div className="flex gap-8 align-middle ml-auto">
               <a
                 href="#home"
-                className="text-[#EDCE73] font-medium  transition"
+                className="text-[#EDCE73] font-medium transition cursor-pointer"
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-[#0A033C] font-medium transition"
+                className="text-[#0A033C] font-medium transition cursor-pointer"
               >
                 About us
               </a>
               <a
                 href="#gaza"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 discover Gaza
               </a>
               <a
                 href="#"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 Service
               </a>
               <a
                 href="#"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 Course
               </a>
               <a
                 href="#"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition"
+                className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 Charity($)
               </a>

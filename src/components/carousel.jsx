@@ -9,7 +9,7 @@ function Carousel({ slides }) {
   const next = () => setIndex((index + 1) % slides.length);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
       <div
         className="flex transform-gpu transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
