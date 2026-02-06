@@ -238,9 +238,9 @@ export function Freelancer() {
 }
 export function Charity() {
   const meserable = [
-    "/carouselpic/y1.webp",
-    "/carouselpic/y2.jpeg",
-    "/carouselpic/y3.jpg",
+    "/carouselpic2/y1.avif",
+    "/carouselpic2/y2.jpg",
+    "/carouselpic2/y3.jpeg",
   ];
   return (
     <section
@@ -261,9 +261,7 @@ export function Charity() {
       </div>
       <div className="max-w-300 mx-auto text-center space-y-6">
         <p className="text-xl">
-          Gaza is a land of resilience, creativity, and hope. Despite years of
-          challenges, its people continue to dream, create, and build a brighter
-          future.
+          Charity for Gaza is a lifeline for innocent civilians.
         </p>
       </div>
       <div className="flex   justify-center items-center w-full max-w-150 mx-auto">
