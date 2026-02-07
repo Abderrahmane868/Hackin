@@ -36,8 +36,8 @@ const online = () => {
   {name: "Khalid Khaldi", rating: 5, photo: "/trainer8.png", profession: "Carpentry"}
 ]
   return(
-<div>
-    <div className="pl-20 pr-20  bg-[url(/BG.png)]  bg-cover bg-no-repeat ">  
+<div className="pl-20 pr-20 ">
+    <div className=" bg-[url(/BG.png)]  bg-cover bg-no-repeat  ">  
     <div className="flex flex-row justify-between items-center h-20 ">
       
       <div className="flex flex-row">

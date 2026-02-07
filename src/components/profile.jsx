@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Trainerprofile(){
+export default function Profile(){ 
   const students = [
     {
       photo: "/profilephoto.png",
@@ -62,32 +62,67 @@ export default function Trainerprofile(){
         </div>
       </div>
 
-      <div className="pt-8 w-full bg-white"> 
-        <input className="w-full h-14 border border-gray-500 rounded-2xl focus:outline-0 pl-3" placeholder="Search your course here ..."></input>
+      <div className="pt-22 w-full bg-white"> 
         <div className="bg-[url(/container.png)] w-full h-45.25 bg-contain pt-5 pl-6 bg-no-repeat ">
-          <p className="text-white text-[12px]">ONLINE COURSE</p> 
-          <p className="pt-5 font-semibold text-white text-[24px]">Sharpen Your Skills With <br/>Professional Online Courses</p>
+          <p className="pt-5 font-semibold text-white text-[24px]">Welcome, Ronaldo</p> 
+          <p className="text-white text-[12px]">Tue, 7 june 2025</p> 
         </div>
-        <p className="text-[16px] font-medium pt-6 pb-5 text-[#0A033C]">Your Courses</p> 
-        <div className="bg-[url(/videos.png)] bg-cover bg-center bg-no-repeat h-80 w-full ">
-        </div>
-        <p className="text-[16px] font-medium  pb-5 text-[#0A033C]">Your Students</p>
         
-        <div className="bg-white">
-          {students.map((student, index) => (
-            <div key={index} className="flex items-center p-4 border-b">
-              <Image src={student.photo} height={40} width={40} alt={student.name} className="rounded-full" />
-              <div className="ml-4">
-                <p className="font-medium text-[14px]">{student.name}</p>
-                <p className="text-[12px] text-gray-500">{student.date}</p>
-              </div>
-              <p className="ml-auto text-[14px]">{student.level}</p>
-              <p className="ml-8 text-[14px]">{student.title}</p>
-              <button className="ml-8 bg-[#FFE8E8] text-[#FF6652] px-4 py-1 rounded-full cursor-pointer text-[12px] font-medium">
-                {student.chat}
-              </button>
+        <div className="px-6 pt-6">
+          <div className="flex flex-row gap-x-6 mb-6">
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">First Name</label>
+              <input 
+                type="text" 
+                placeholder="Your First Name" 
+                className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] focus:outline-none focus:border-[#4BA9FF]"
+              />
             </div>
-          ))}
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">Nick Name</label>
+              <input 
+                type="text" 
+                placeholder="Your Nick Name" 
+                className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] focus:outline-none focus:border-[#4BA9FF]"
+              />
+            </div>
+          </div>
+          
+          <div className="flex flex-row gap-x-6 mb-6">
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">Gender</label>
+              <select className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] text-[#999] focus:outline-none focus:border-[#4BA9FF] appearance-none bg-white">
+                <option>Male</option>
+                <option>Female</option>
+
+              </select>
+            </div>
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">Country</label>
+              <input placeholder="Country" type="text" className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] text-[#999] focus:outline-none focus:border-[#4BA9FF] appearance-none bg-white">
+              </input> 
+            </div>
+          </div>
+          
+          <div className="flex flex-row gap-x-6 mb-6">
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">My email Address</label>
+                            <input placeholder="Country" type="text" className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] text-[#999] focus:outline-none focus:border-[#4BA9FF] appearance-none bg-white"></input>
+
+            </div>
+            <div className="flex-1">
+              <label className="block text-[14px] text-[#0A033C] mb-2">Phone Number</label>
+              <input 
+                type="text" 
+                placeholder="Phone Number" 
+                className="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-[14px] focus:outline-none focus:border-[#4BA9FF]"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <p className="text-[16px] font-medium pt-6 pb-5 px-6 text-[#0A033C]">Course evolution</p>
+        <div className="bg-[url(/product.png)] w-full  h-45.25 bg-contain pt-5 pl-6 bg-no-repeat ">
         </div>
       </div>
 

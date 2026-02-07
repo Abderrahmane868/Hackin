@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function Trainerprofile(){
+export default function Freelancerprofile(){ 
   const students = [
     {
       photo: "/profilephoto.png",
       name: "Prashant Kumar Singh",
       date: "25/2/2023",
-      level: "beginner",
+      country: "India", 
       title: "Understanding concept of react",
       chat: "chat"
     },
@@ -14,7 +14,7 @@ export default function Trainerprofile(){
       photo: "/profilephoto.png",
       name: "Prashant Kumar",
       date: "25/2/2023",
-      level: "advanced",
+      country: "Russia",
       title: "Understanding concept of react",
       chat: "chat"
     },
@@ -66,12 +66,12 @@ export default function Trainerprofile(){
         <input className="w-full h-14 border border-gray-500 rounded-2xl focus:outline-0 pl-3" placeholder="Search your course here ..."></input>
         <div className="bg-[url(/container.png)] w-full h-45.25 bg-contain pt-5 pl-6 bg-no-repeat ">
           <p className="text-white text-[12px]">ONLINE COURSE</p> 
-          <p className="pt-5 font-semibold text-white text-[24px]">Sharpen Your Skills With <br/>Professional Online Courses</p>
+          <p className="pt-5 font-semibold text-white text-[24px]">Apply your skills into <br/>concrete projects</p>
         </div>
-        <p className="text-[16px] font-medium pt-6 pb-5 text-[#0A033C]">Your Courses</p> 
-        <div className="bg-[url(/videos.png)] bg-cover bg-center bg-no-repeat h-80 w-full ">
+        <p className="text-[16px] font-medium pt-6 pb-5 text-[#0A033C]">Your Projects</p> 
+        <div className="bg-[url(/group.png)] bg-cover bg-center bg-no-repeat h-100 w-full ">
         </div>
-        <p className="text-[16px] font-medium  pb-5 text-[#0A033C]">Your Students</p>
+        <p className="text-[16px] font-medium  pb-5 text-[#0A033C]">Your Clients</p>
         
         <div className="bg-white">
           {students.map((student, index) => (
@@ -81,7 +81,7 @@ export default function Trainerprofile(){
                 <p className="font-medium text-[14px]">{student.name}</p>
                 <p className="text-[12px] text-gray-500">{student.date}</p>
               </div>
-              <p className="ml-auto text-[14px]">{student.level}</p>
+              <p className="ml-auto text-[14px]">{student.country}</p>
               <p className="ml-8 text-[14px]">{student.title}</p>
               <button className="ml-8 bg-[#FFE8E8] text-[#FF6652] px-4 py-1 rounded-full cursor-pointer text-[12px] font-medium">
                 {student.chat}
