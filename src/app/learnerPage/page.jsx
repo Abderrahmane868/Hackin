@@ -3,6 +3,8 @@ import Footer from "../../components/Footer";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import NavBar from "../../components/navBar";
+import { useEffect } from "react";
 export default function Courses() {
   const [visible, setVisible] = useState("both");
   const both = () => {
@@ -129,21 +131,41 @@ export default function Courses() {
       profession: "Carpentry",
     },
   ];
+  const [isAuth, setIsAuth] = useState(false);
+
+  useEffect(() => {
+    const authStatus = localStorage.getItem("isAuth") === "true";
+    setIsAuth(authStatus);
+  }, []);
   return (
     <div className="pl-20 pr-20">
       <div className=" bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
-        <div className="flex flex-row justify-between items-center h-20 ">
-          <div className="flex flex-row">
-            <Image src="/logo.png" height={20} width={40} alt="logo" />
-            <p className="font-semibold text-[30px] text-[#0A033C]">Nafas</p>
+        {isAuth == true ? (
+          <div className="flex flex-row justify-between  gap-4 p-5 items-center h-20 ">
+            <div className="flex flex-row">
+              <Image src="/logo.png" height={20} width={40} alt="logo" />
+              <p className="font-semibold text-[30px] text-[#0A033C]">Nafas</p>
+            </div>
+            <div className="flex flex-row gap-4">
+              <Link href="/Dashboards/Profile">
+                <button className="text-center cursor-pointer h-8.5 w-45 bg-[#FF6652] text-white text-[16px] rounded-[10px] px-4">
+                  My account
+                </button>
+              </Link>
+              <button
+                className="cursor-pointer h-8.5 w-auto bg-[#FF6652] text-white text-[16px] rounded-[10px] px-4 "
+                onClick={() => {
+                  localStorage.setItem("isAuth", false);
+                  window.location.reload();
+                }}
+              >
+                Logout
+              </button>
+            </div>
           </div>
-          <Link href="/Dashboards/trainerProfile">
-          <button className="cursor-pointer  h-8.5 w-45 bg-[#FF6652] text-white text-[16px] rounded-[10px] ">
-            My account
-          </button>
-          </Link>
-          
-        </div>
+        ) : (
+          <NavBar />
+        )}
         <div
           className="w-full h-px mb-10"
           style={{

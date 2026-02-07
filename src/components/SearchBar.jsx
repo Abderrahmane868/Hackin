@@ -3,7 +3,7 @@ function SearchBar() {
     <div className=" flex items-center justify-center">
       <div className="flex items-center  rounded-xl px-6 py-4 w-[700px] shadow">
         <div className="flex items-center gap-2 text-red-500 font-medium">
-          <span className="text-xl">🔍</span>
+          
           <span>Search</span>
         </div>
 

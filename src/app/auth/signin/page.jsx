@@ -74,6 +74,9 @@ export default function Signin() {
                 <button
                   type="submit"
                   className="cursor-pointer w-full h-14 bg-[#EDCE73] hover:bg-[#d7bc6b] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
+                  onClick={()=>{
+                    localStorage.setItem('isAuth',true)
+                  }}
                 >
                   Sign in
                 </button>

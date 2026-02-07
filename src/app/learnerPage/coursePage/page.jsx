@@ -35,6 +35,7 @@ export default function Trainers() {
       icon: "/vector.png",
     },
   ];
+
   return (
     <div>
       <div className="pl-20 pr-20  bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
@@ -43,9 +44,22 @@ export default function Trainers() {
             <Image src="/logo.png" height={20} width={40} alt="logo" />
             <p className="font-semibold text-[30px] text-[#0A033C]">Nafas</p>
           </div>
-          <button className="cursor-pointer  h-8.5 w-45 bg-[#FF6652] text-white text-[16px] rounded-[10px] ">
-            My account
-          </button>
+          <div className="flex flex-row gap-4">
+            <Link href="/Dashboards/Profile">
+              <button className="text-center cursor-pointer h-8.5 w-45 bg-[#FF6652] text-white text-[16px] rounded-[10px] px-4">
+                My account
+              </button>
+            </Link>
+            <button
+              className="cursor-pointer h-8.5 w-auto bg-[#FF6652] text-white text-[16px] rounded-[10px] px-4 "
+              onClick={() => {
+                localStorage.setItem("isAuth", false);
+                window.location.reload();
+              }}
+            >
+              Logout
+            </button>
+          </div>
         </div>
         <div
           className="w-full h-px mb-10"

@@ -19,10 +19,12 @@ function CharityNavBar() {
             </div>
 
             <div className="flex gap-8 align-middle ml-auto"></div>
-            
-              <button className="ml-auto  px-6 py-2  text-[#0A033C] font-medium ">
+            <Link href="/auth/signup">
+            <button className="ml-auto  px-6 py-2  text-[#0A033C] font-medium ">
                 My account
               </button>
+            </Link>
+              
            
           </div>
         </div>
