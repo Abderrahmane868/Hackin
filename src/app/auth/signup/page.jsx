@@ -1,23 +1,42 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 export default function Signup() {
-  const [user, setUserr] = useState({
+  const [user, setUser] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    id: "",
     phone: "",
     password: "",
   });
+
+  function handleChange(e) {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  }
+  async function handleS() {
+    const res = await fetch("/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prenom: user.firstName,
+        nom: user.lastName,
+        email: user.email,
+        telephone: user.phone,
+        password: user.password,
+        role: "client_3",
+      }),
+    });
+  }
 
   const handleSignup = () => {
     if (
       !user.firstName ||
       !user.lastName ||
       !user.email ||
-      !user.id ||
       !user.phone ||
       !user.password
     ) {
@@ -62,7 +81,7 @@ export default function Signup() {
                   className="h-14 border rounded-xl border-[#666666] px-4"
                   value={user.firstName}
                   onChange={(e) =>
-                    setUserr({ ...user, firstName: e.target.value })
+                    setUser({ ...user, firstName: e.target.value })
                   }
                 ></input>
               </div>
@@ -73,7 +92,7 @@ export default function Signup() {
                   className="border-[#666666] border h-14 rounded-xl px-4"
                   value={user.lastName}
                   onChange={(e) =>
-                    setUserr({ ...user, lastName: e.target.value })
+                    setUser({ ...user, lastName: e.target.value })
                   }
                 ></input>
               </div>
@@ -87,7 +106,7 @@ export default function Signup() {
                 type="email"
                 className="border-[#666666] border w-full h-14 rounded-xl px-4"
                 value={user.email}
-                onChange={(e) => setUserr({ ...user, email: e.target.value })}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
               ></input>
             </div>
 
@@ -96,8 +115,6 @@ export default function Signup() {
               <input
                 type="text"
                 className="border-[#666666] border w-full h-14 rounded-xl px-4"
-                value={user.id}
-                onChange={(e) => setUserr({ ...user, id: e.target.value })}
               ></input>
             </div>
 
@@ -109,7 +126,7 @@ export default function Signup() {
                 type="text"
                 className="border-[#666666] border w-full h-14 rounded-xl px-4"
                 value={user.phone}
-                onChange={(e) => setUserr({ ...user, phone: e.target.value })}
+                onChange={(e) => setUser({ ...user, phone: e.target.value })}
               ></input>
             </div>
 
@@ -119,9 +136,7 @@ export default function Signup() {
                 type="password"
                 className="border-[#666666] border w-full h-14 rounded-xl px-4"
                 value={user.password}
-                onChange={(e) =>
-                  setUserr({ ...user, password: e.target.value })
-                }
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
               ></input>
               <p className="text-xs text-[#666666] mt-2">
                 Use 8 or more characters with a mix of letters, numbers &
@@ -134,6 +149,8 @@ export default function Signup() {
               <button
                 className="w-41 h-16 cursor-pointer bg-[#EDCE73] rounded-[40px] text-[22px] font-medium text-white"
                 onClick={() => {
+                  handleSignup();
+                  handleS();
                   localStorage.setItem("isAuth", true);
                 }}
               >

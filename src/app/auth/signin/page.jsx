@@ -1,13 +1,35 @@
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+export default async function Signin() {
+  function handleChange(e) {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  }
+ let wrong  = false;
 
-export default function Signin() {
+  async function handleS() {
+    const res = await fetch("/api/users", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: user.email,
+      }),
+      
+    });
+    return await res.json();
+  }
+  function checkLogin(){
+    const data = handleS();
+    if (data.email === user.email && data.password === user.password) 
+    { wrong = true ;}
+  }
   return (
     <>
       <div className="min-h-screen bg-[#F7F5FA] flex flex-col">
         <div className="pt-8 px-8 md:px-16 lg:px-24 flex flex-row gap-x-2 items-center">
-          <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
+          <Image src="/icon.png" width={30} hgit eight={25} alt="Nafas Logo" />
           <h1 className="font-bold text-3xl text-[#0A033C]">NAFAS</h1>
         </div>
 
@@ -70,17 +92,21 @@ export default function Signin() {
                   Forgot password?
                 </button>
               </div>
-              <Link href="/">
+              
                 <button
                   type="submit"
                   className="cursor-pointer w-full h-14 bg-[#EDCE73] hover:bg-[#d7bc6b] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
-                  onClick={()=>{
-                    localStorage.setItem('isAuth',true)
-                  }}
+                  onClick={
+                    checkLogin
+                  }
                 >
                   Sign in
                 </button>
-              </Link>
+                {wrong ? <>
+                </> : <>
+                wrong password
+                </>}
+             
 
               <p className="text-center text-base text-gray-600 mt-6">
                 Don't have an account?{" "}
