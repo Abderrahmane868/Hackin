@@ -30,29 +30,29 @@ export default function Signup() {
 
   return (
     <>
-      <div className="bg-amber-200 flex flex-col ">
-        <div className="pt-10.75 flex flex-row gap-x-1.5 ml-18">
+      <div className="bg-[#F7F5FA] flex flex-col pb-10 ">
+        <div className="pt-8 flex flex-row gap-x-1.5 ml-8">
           <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
-          <h1 className="font-semibold text-3xl text-[#0A033C]">NAFAS</h1>
+          <h1 className="font-semibold text-3xl ">NAFAS</h1>
         </div>
-        <div className="bg-amber-400 flex flex-row justify-between pt-16 pb-16 pr-10.5 pl-17">
+        <div className="bg-[#F7F5FA] flex flex-row justify-evenly gap-0 pt-16 px-8">
           <div>
-            <h1 className="text-[56px] font-bold text-[#0A033C]">
+            <h1 className="text-[56px] font-bold ">
               {" "}
               <span>Welcome to</span>
               <br></br>
               Nafas Platform
             </h1>
             <Image
-              src="/OBJECTS.png"
+              src="/shit.png"
               height={452}
               width={456}
               alt="Welcome illustration"
             />
           </div>
-          <div className="bg-white border rounded-3xl h-218 border-[#666666] pt-12 pb-35.5 pl-22 pr-37.5 ">
+          <div className="bg-white border rounded-3xl border-[#666666] pt-12 pb-12 px-12 max-w-xl">
             <h1 className="text-[32px] font-medium mb-8">Sign up now</h1>
-            <div className="mb-11.75 flex flex-row gap-x-4">
+            <div className="mb-6 flex flex-row gap-x-4">
               <div className="flex flex-col">
                 <label className="text-[#666666] text-sm mb-2">
                   First name
@@ -79,7 +79,7 @@ export default function Signup() {
               </div>
             </div>
 
-            <div className="mb-11.75 flex flex-col">
+            <div className="mb-6 flex flex-col">
               <label className="text-[#666666] text-sm mb-2">
                 Email address
               </label>
@@ -91,7 +91,7 @@ export default function Signup() {
               ></input>
             </div>
 
-            <div className="mb-11.75 flex flex-col">
+            <div className="mb-6 flex flex-col">
               <label className="text-[#666666] text-sm mb-2">ID number</label>
               <input
                 type="text"
@@ -101,7 +101,7 @@ export default function Signup() {
               ></input>
             </div>
 
-            <div className="mb-11.75 flex flex-col">
+            <div className="mb-6 flex flex-col">
               <label className="text-[#666666] text-sm mb-2">
                 Phone number
               </label>
@@ -131,7 +131,7 @@ export default function Signup() {
 
             <div className="flex flex-row justify-between items-center mt-8">
               <button
-                className="w-41 h-16 cursor-pointer bg-[#9C4DF4] rounded-[40px] text-[22px] font-medium text-white"
+                className="w-41 h-16 cursor-pointer bg-[#EDCE73] rounded-[40px] text-[22px] font-medium text-white"
                 onClick={() => {
                   handleSignup();
                   console.log(user);

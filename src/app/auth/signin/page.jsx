@@ -20,7 +20,7 @@ export default function Signin() {
             </h1>
             <div className="flex justify-center lg:justify-start">
               <Image
-                src="/OBJECTS.png"
+                src="/shit.png"
                 height={400}
                 width={400}
                 alt="Platform illustration"
@@ -73,7 +73,7 @@ export default function Signin() {
 
               <button
                 type="submit"
-                className="cursor-pointer w-full h-14 bg-[#9C4DF4] hover:bg-[#8a3de0] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
+                className="cursor-pointer w-full h-14 bg-[#EDCE73] hover:bg-[#d7bc6b] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
               >
                 Sign in
               </button>
@@ -81,10 +81,11 @@ export default function Signin() {
               <p className="text-center text-base text-gray-600 mt-6">
                 Don't have an account?{" "}
                 <Link href="/auth/signup">
-                  <span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
-                    Sign up
-                  </span>
+<span className="text-[#9C4DF4] font-semibold hover:text-[#8a3de0] underline cursor-pointer transition-colors">
+                  Sign up
+                </span>
                 </Link>
+                
               </p>
             </div>
           </div>
