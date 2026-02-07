@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CharityNavBar from "../../components/charityNavBar";
-import Footer from "@/src/components/Footer";
+import Footer from "../../components/Footer";
 function Charity() {
   return (
     <div>

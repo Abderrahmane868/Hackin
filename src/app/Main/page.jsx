@@ -1,4 +1,4 @@
-import NavBar from "@/src/components/navBar";
+import NavBar from "../../components/navBar";
 import "./page.css";
 import {
   HeroSection,

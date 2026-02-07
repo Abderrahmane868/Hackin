@@ -1,7 +1,8 @@
 import Image from "next/image";
-import SearchBar from "@/src/components/SearchBar";
-import Carousel from "@/src/components/carousel";
+import SearchBar from "../../components/SearchBar";
+import Carousel from "../../components/carousel";
 import Link from "next/link";
+
 export function HeroSection() {
   return (
     <section

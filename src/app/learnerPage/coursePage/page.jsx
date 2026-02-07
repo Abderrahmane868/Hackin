@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import Footer from "@/src/components/Footer";
+import Footer from "../../../components/Footer";
 export default function Trainers() {
   const coursearray = [
     {
