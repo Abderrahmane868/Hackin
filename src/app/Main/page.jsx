@@ -42,15 +42,15 @@ function Main() {
                 className="cursor-pointer h-8.5 w-auto bg-[#FF6652] text-white text-[16px] rounded-[10px] px-4 "
                 onClick={() => {
                   localStorage.setItem("isAuth", false);
-                  window.location.reload();
+                  window.location.reload(); 
                 }}
               >
-                Logout
+                Logout 
               </button>
             </div>
           </div>
         ) : (
-          <NavBar />
+          <NavBar /> 
         )}
 
         <HeroSection />

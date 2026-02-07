@@ -7,6 +7,8 @@ import NavBar from "../../components/navBar";
 import { useEffect } from "react";
 export default function Courses() {
   const [visible, setVisible] = useState("both");
+  const [searchQuery, setSearchQuery] = useState("");
+  
   const both = () => {
     setVisible("both");
   };
@@ -131,6 +133,15 @@ export default function Courses() {
       profession: "Carpentry",
     },
   ];
+
+  const filteredTrainers = trainersarray.filter((trainer) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      trainer.name.toLowerCase().includes(query) ||
+      trainer.profession.toLowerCase().includes(query)
+    );
+  });
+
   const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
@@ -138,7 +149,8 @@ export default function Courses() {
     setIsAuth(authStatus);
   }, []);
   return (
-    <div className="pl-20 pr-20">
+    <div >
+      <div className="pl-20 pr-20 pb-10"> 
       <div className=" bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
         {isAuth == true ? (
           <div className="flex flex-row justify-between  gap-4 p-5 items-center h-20 ">
@@ -174,7 +186,7 @@ export default function Courses() {
           }}
         ></div>
         <div className="   justify-center items-center content-center h-67.5 w-full rounded-[20px] bg-[url(/Imge.png)] bg-cover bg-no-repeat">
-          <Link href="/">
+          <Link href="/Main">
             <Image
               src="/back.png"
               height={70}
@@ -182,7 +194,7 @@ export default function Courses() {
               alt="back"
               className="-mt-12 cursor-pointer"
             />
-          </Link>
+          </Link> 
           <p className="text-[45px]  pl-39.75   font-semibold text-[#0A033C]">
             Nafas Courses
             <br />
@@ -246,17 +258,22 @@ export default function Courses() {
           <input
             className="rounded-[10px] h-15 w-2/3 focus:outline-0 pl-4 border border-gray-300"
             placeholder="Search Trainer"
-          ></input>
-          <button className="bg-[#EDCE73] text-white items-center w-35.75 h-11.5 cursor-pointer rounded-[10px]">
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button 
+            className="bg-[#EDCE73] text-white items-center w-35.75 h-11.5 cursor-pointer rounded-[10px]"
+            onClick={() => {
+            }}
+          >
             Search
           </button>
         </div>
 
         <div className="grid grid-cols-2 gap-5">
-          {trainersarray.map((trainer, index) => (
-            <Link href="/learnerPage/coursePage">
+          {filteredTrainers.map((trainer, index) => (
+            <Link href="/learnerPage/coursePage" key={index}>
               <div
-                key={index}
                 className="flex flex-row items-center bg-white rounded-[15px] p-5 h-33.25  shadow-lg"
               >
                 <Image
@@ -283,8 +300,15 @@ export default function Courses() {
             </Link>
           ))}
         </div>
+        {filteredTrainers.length === 0 && (
+          <div className="text-center py-10">
+            <p className="text-[20px] text-[#5D5A6F]">No trainers found matching your search.</p>
+          </div>
+        )}
       </div>
-      <Footer />
+    </div>
+          <Footer  />
+
     </div>
   );
 }
