@@ -249,7 +249,7 @@ export function Charity() {
   ];
   return (
     <section
-      id="gaza"
+      id="charity"
       className="min-h-screen flex flex-col items-center justify-center gap-10 py-20 relative transition-all duration-500"
     >
       <div className="absolute top-10 left-10 opacity-20">

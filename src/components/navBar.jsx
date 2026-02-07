@@ -22,13 +22,13 @@ function NavBar() {
             <div className="flex gap-8 align-middle ml-auto">
               <a
                 href="#home"
-                className="text-[#EDCE73] font-medium transition cursor-pointer"
+                className="text-[#0A033C] hover:text-blue-700 font-medium transition cursor-pointer"
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-[#0A033C] font-medium transition cursor-pointer"
+                className="text-[#0A033C] hover:text-blue-700 font-medium transition cursor-pointer"
               >
                 About us
               </a>
@@ -44,14 +44,9 @@ function NavBar() {
               >
                 Service
               </a>
+
               <a
-                href="#"
-                className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
-              >
-                Course
-              </a>
-              <a
-                href="#"
+                href="#charity"
                 className="text-[#0A033C] font-medium hover:text-blue-700 transition cursor-pointer"
               >
                 Charity($)
