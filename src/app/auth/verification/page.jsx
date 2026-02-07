@@ -78,7 +78,7 @@ export default function Verification() {
                   className="border-2 border-gray-300 w-full h-14 rounded-xl px-4 text-gray-800 focus:border-[#9C4DF4] focus:outline-none focus:ring-2 focus:ring-[#9C4DF4]/20 transition-all"
                 />
               </div>
-              <Link href="/trainerProfile">
+              <Link href="/Dashboards/trainerProfile">
                 <button
                   type="submit"
                   className="w-50 h-14 bg-[#9C4DF4] hover:bg-[#8a3de0] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 function CharityNavBar() {
   return (
     <>
@@ -19,10 +19,11 @@ function CharityNavBar() {
             </div>
 
             <div className="flex gap-8 align-middle ml-auto"></div>
-
-            <button className="ml-auto  px-6 py-2  text-[#0A033C] font-medium ">
-              My account
-            </button>
+            
+              <button className="ml-auto  px-6 py-2  text-[#0A033C] font-medium ">
+                My account
+              </button>
+           
           </div>
         </div>
       </nav>

@@ -137,9 +137,12 @@ export default function Courses() {
             <Image src="/logo.png" height={20} width={40} alt="logo" />
             <p className="font-semibold text-[30px] text-[#0A033C]">Nafas</p>
           </div>
+          <Link href="/Dashboards/trainerProfile">
           <button className="cursor-pointer  h-8.5 w-45 bg-[#FF6652] text-white text-[16px] rounded-[10px] ">
             My account
           </button>
+          </Link>
+          
         </div>
         <div
           className="w-full h-px mb-10"

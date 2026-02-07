@@ -130,6 +130,8 @@ export default function Signup() {
             </div>
 
             <div className="flex flex-row justify-between items-center mt-8">
+             <Link href="">
+             </Link>
               <button
                 className="w-41 h-16 cursor-pointer bg-[#EDCE73] rounded-[40px] text-[22px] font-medium text-white"
                 onClick={() => {

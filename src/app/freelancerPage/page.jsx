@@ -257,6 +257,13 @@ export default function FreelanceCourses() {
             </div>
           ))}
         </div>
+        <div className="w-full flex justify-center items-center p-10">
+          <Link href="/auth/freelancerVerification">
+            <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-14 w-60  text-white rounded">
+              Join as a freelancer
+            </button>
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
