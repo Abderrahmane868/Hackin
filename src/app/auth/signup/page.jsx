@@ -33,18 +33,18 @@ export default function Signup() {
       <div className="bg-[#F7F5FA] flex flex-col pb-10 ">
         <div className="pt-8 flex flex-row gap-x-1.5 ml-8">
           <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
-          <h1 className="font-semibold text-3xl text-[#0A033C]">NAFAS</h1>
+          <h1 className="font-semibold text-3xl ">NAFAS</h1>
         </div>
-        <div className="bg-[#F7F5FA] flex flex-row justify-between gap-8 pt-16 px-8">
+        <div className="bg-[#F7F5FA] flex flex-row justify-evenly gap-0 pt-16 px-8">
           <div>
-            <h1 className="text-[56px] font-bold text-[#0A033C]">
+            <h1 className="text-[56px] font-bold ">
               {" "}
               <span>Welcome to</span>
               <br></br>
               Nafas Platform
             </h1>
             <Image
-              src="/OBJECTS.png"
+              src="/shit.png"
               height={452}
               width={456}
               alt="Welcome illustration"
@@ -131,7 +131,7 @@ export default function Signup() {
 
             <div className="flex flex-row justify-between items-center mt-8">
               <button
-                className="w-41 h-16 cursor-pointer bg-[#9C4DF4] rounded-[40px] text-[22px] font-medium text-white"
+                className="w-41 h-16 cursor-pointer bg-[#EDCE73] rounded-[40px] text-[22px] font-medium text-white"
                 onClick={() => {
                   handleSignup();
                   console.log(user);

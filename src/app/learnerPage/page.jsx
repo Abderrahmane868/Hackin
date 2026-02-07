@@ -203,6 +203,7 @@ export default function Courses() {
                     alt={arr.name}
                     className="pb-5"
                   />
+
                   <p className="pb-3.75 text-[25px] text-[#0A033C]">
                     {arr.name}
                   </p>
@@ -228,31 +229,33 @@ export default function Courses() {
 
         <div className="grid grid-cols-2 gap-5">
           {trainersarray.map((trainer, index) => (
-            <div
-              key={index}
-              className="flex flex-row items-center bg-white rounded-[15px] p-5 h-33.25  shadow-lg"
-            >
-              <Image
-                src={trainer.photo}
-                height={103}
-                width={160}
-                alt={trainer.name}
-                className="rounded-[10px] mr-4"
-              />
-              <div className="flex flex-col">
-                <h3 className="text-[20px] font-semibold text-[#0A033C]">
-                  {trainer.name}
-                </h3>
-                <div className="flex items-center">
-                  <span className="text-yellow-400 text-[18px]">
-                    {"★".repeat(trainer.rating)}
-                  </span>
+            <Link href="/learnerPage/coursePage">
+              <div
+                key={index}
+                className="flex flex-row items-center bg-white rounded-[15px] p-5 h-33.25  shadow-lg"
+              >
+                <Image
+                  src={trainer.photo}
+                  height={103}
+                  width={160}
+                  alt={trainer.name}
+                  className="rounded-[10px] mr-4"
+                />
+                <div className="flex flex-col">
+                  <h3 className="text-[20px] font-semibold text-[#0A033C]">
+                    {trainer.name}
+                  </h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-[18px]">
+                      {"★".repeat(trainer.rating)}
+                    </span>
+                  </div>
+                  <p className="text-[16px] text-[#EDCE73]">
+                    {trainer.profession}
+                  </p>
                 </div>
-                <p className="text-[16px] text-[#EDCE73]">
-                  {trainer.profession}
-                </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

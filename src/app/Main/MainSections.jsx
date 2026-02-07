@@ -221,7 +221,7 @@ export function Freelancer() {
               you complete on Nafas helps fund learning, employment, and
               rebuilding efforts in Gaza.
             </p>
-            <Link href="/auth/signup">
+            <Link href="/freelancerPage">
               <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-14 w-60 bg-purple-500 text-white rounded">
                 Become a freelance
               </button>

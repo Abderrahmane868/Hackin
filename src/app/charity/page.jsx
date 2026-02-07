@@ -11,7 +11,7 @@ function Charity() {
         <div className="flex  items-center ml-6">
           <div className="font-bold text-xl w-1/2">
             <h2 className="h-00 text-4xl pb-5 text-red-600">Nafas</h2>
-            <p className="pb-10">  
+            <p className="pb-10">
               Gaza needs hope. Every day, families face challenges that no one
               should endure. Your donation provides food, shelter, medical care,
               and rebuilding support to those who need it most. Every
@@ -23,7 +23,7 @@ function Charity() {
                 Donate Now
               </button>
             </Link>
-          </div>  
+          </div>
         </div>
       </div>
       <div>
@@ -34,7 +34,8 @@ function Charity() {
           <div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?1"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop"
+                alt="Community infrastructure and schools"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
@@ -43,7 +44,7 @@ function Charity() {
               </h3>
 
               <div className="flex justify-between text-sm mb-2">
-                <span className ="font-semibold">$256,200</span>
+                <span className="font-semibold">$256,200</span>
                 <span className="font-semibold">$256,200</span>
                 <span className="text-gray-400">$500,000</span>
               </div>
@@ -62,7 +63,8 @@ function Charity() {
 
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?2"
+                src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&h=250&fit=crop"
+                alt="Food and basic necessities"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
@@ -89,7 +91,8 @@ function Charity() {
 
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?3"
+                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&h=250&fit=crop"
+                alt="Emergency relief and community support"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
@@ -116,7 +119,8 @@ function Charity() {
 
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?4"
+                src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=400&h=250&fit=crop"
+                alt="Medical and emergency support"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
@@ -143,7 +147,8 @@ function Charity() {
 
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?5"
+                src="https://images.unsplash.com/photo-1548263594-a71ea65a8043?w=400&h=250&fit=crop"
+                alt="Clean water and sanitation"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
@@ -170,7 +175,8 @@ function Charity() {
 
             <div className="bg-white rounded-xl shadow p-4">
               <img
-                src="https://picsum.photos/400/250?6"
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=250&fit=crop"
+                alt="Rebuilding homes and shelters"
                 className="rounded-lg mb-4 w-full h-40 object-cover"
               />
 
