@@ -69,7 +69,7 @@ export default function Trainers() {
           }}
         ></div>
         <div className="   justify-center items-center content-center h-67.5 w-full rounded-[20px] bg-[url(/Imge.png)] bg-cover bg-no-repeat">
-          <Link href="/">
+          <Link href="/learnerPage"> 
             <Image
               src="/back.png"
               height={70}

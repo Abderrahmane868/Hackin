@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen py-16 relative flex items-center justify-center justifyцентр"
+      className="min-h-screen py-16 relative flex items-center justify-center justifyцентр" 
     >
       <div className="absolute top-0 left-0 opacity-20">
         <Image

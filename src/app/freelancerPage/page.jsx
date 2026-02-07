@@ -5,6 +5,8 @@ import { useState } from "react";
 import Link from "next/link";
 export default function FreelanceCourses() {
   const [visible, setVisible] = useState("both");
+  const [searchQuery, setSearchQuery] = useState("");
+  
   const both = () => {
     setVisible("both");
   };
@@ -130,9 +132,19 @@ export default function FreelanceCourses() {
       profession: "Carpentry",
     },
   ];
+
+  const filteredTrainers = trainersarray.filter((trainer) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      trainer.name.toLowerCase().includes(query) ||
+      trainer.profession.toLowerCase().includes(query)
+    );
+  });
+
   return (
-    <div className="pl-20 pr-20">
-      <div className="pl-20 pr-20  bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
+    <div >
+      <div className="pl-20 pr-20">
+      <div className="  bg-[url(/BG.png)]  bg-cover bg-no-repeat ">
         <div className="flex flex-row justify-between items-center h-20 ">
           <div className="flex flex-row">
             <Image src="/logo.png" height={20} width={40} alt="logo" />
@@ -152,7 +164,7 @@ export default function FreelanceCourses() {
           }}
         ></div>
         <div className="   justify-center items-center content-center h-67.5 w-full rounded-[20px] bg-[url(/Imge.png)] bg-cover bg-no-repeat">
-          <Link href="/">
+          <Link href="/"> 
             <Image
               src="/back.png"
               height={70}
@@ -224,14 +236,20 @@ export default function FreelanceCourses() {
           <input
             className="rounded-[10px] h-15 w-2/3 focus:outline-0 pl-4 border border-gray-300"
             placeholder="Search Trainer"
-          ></input>
-          <button className="bg-[#EDCE73] text-white items-center w-35.75 h-11.5 cursor-pointer rounded-[10px]">
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button 
+            className="bg-[#EDCE73] text-white items-center w-35.75 h-11.5 cursor-pointer rounded-[10px]"
+            onClick={() => {
+            }}
+          >
             Search
           </button>
         </div>
 
         <div className="grid grid-cols-2 gap-5">
-          {trainersarray.map((trainer, index) => (
+          {filteredTrainers.map((trainer, index) => (
             <div
               key={index}
               className="flex flex-row items-center bg-white rounded-[15px] p-5 h-33.25  shadow-lg"
@@ -259,15 +277,22 @@ export default function FreelanceCourses() {
             </div>
           ))}
         </div>
+        {filteredTrainers.length === 0 && (
+          <div className="text-center py-10">
+            <p className="text-[20px] text-[#5D5A6F]">No trainers found matching your search.</p>
+          </div>
+        )}
         <div className="w-full flex justify-center items-center p-10">
           <Link href="/auth/freelancerVerification">
-            <button className="bg-gradient-to-r from-[#FF6652] to-[#993D31] h-14 w-60  text-white rounded">
+            <button className="bg-linear-to-r from-[#FF6652] to-[#993D31] h-14 w-60  text-white rounded">
               Join as a freelancer
             </button>
           </Link>
         </div>
       </div>
-      <Footer />
+    </div>
+          <Footer />
+
     </div>
   );
 }

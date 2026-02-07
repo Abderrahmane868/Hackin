@@ -53,7 +53,7 @@ const online = () => {
     <Image src="/back.png" height={70} width={70} alt="back" className="-mt-12 cursor-pointer" />
 <p className="text-[45px]  pl-39.75   font-semibold text-[#0A033C]">Nafas Courses<br/>
 For You </p>
-    </div>
+    </div> 
     
     
     
@@ -71,7 +71,7 @@ Online courses
       </button>
       <button className="cursor-pointer h-15 w-38">
 More courses 
-      </button>
+      </button> 
     </div>
     <h1 className="text-[30px] font-semibold text-[#0A033C]">Courses</h1>
         <div  className="flex relative flex-row  flex-wrap  ">  
