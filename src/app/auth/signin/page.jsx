@@ -29,7 +29,7 @@ export default async function Signin() {
     <>
       <div className="min-h-screen bg-[#F7F5FA] flex flex-col">
         <div className="pt-8 px-8 md:px-16 lg:px-24 flex flex-row gap-x-2 items-center">
-          <Image src="/icon.png" width={30} hgit eight={25} alt="Nafas Logo" />
+          <Image src="/icon.png" width={30} height={25} alt="Nafas Logo" />
           <h1 className="font-bold text-3xl text-[#0A033C]">NAFAS</h1>
         </div>
 

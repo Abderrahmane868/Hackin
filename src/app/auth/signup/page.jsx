@@ -2,42 +2,37 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Router from "next/router";
 export default function Signup() {
   const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
+    nom: "",
+    prenom: "",
+    telephone: "",
     password: "",
+    email: "",
   });
+
+  async function addUser() {
+    const req = await fetch("http://127.0.0.1:8000/users/", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+  }
 
   function handleChange(e) {
     setUser({ ...user, [e.target.name]: e.target.value });
   }
-  async function handleS() {
-    const res = await fetch("/api/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        prenom: user.firstName,
-        nom: user.lastName,
-        email: user.email,
-        telephone: user.phone,
-        password: user.password,
-        role: "client_3",
-      }),
-    });
-  }
 
   const handleSignup = () => {
     if (
-      !user.firstName ||
-      !user.lastName ||
+      !user.nom ||
+      !user.prenom ||
       !user.email ||
-      !user.phone ||
+      !user.telephone ||
       !user.password
     ) {
       alert("Please fill in all fields");
@@ -79,10 +74,8 @@ export default function Signup() {
                 <input
                   type="text"
                   className="h-14 border rounded-xl border-[#666666] px-4"
-                  value={user.firstName}
-                  onChange={(e) =>
-                    setUser({ ...user, firstName: e.target.value })
-                  }
+                  value={user.nom}
+                  onChange={(e) => setUser({ ...user, nom: e.target.value })}
                 ></input>
               </div>
               <div className="flex flex-col">
@@ -90,10 +83,8 @@ export default function Signup() {
                 <input
                   type="text"
                   className="border-[#666666] border h-14 rounded-xl px-4"
-                  value={user.lastName}
-                  onChange={(e) =>
-                    setUser({ ...user, lastName: e.target.value })
-                  }
+                  value={user.prenom}
+                  onChange={(e) => setUser({ ...user, prenom: e.target.value })}
                 ></input>
               </div>
             </div>
@@ -125,8 +116,10 @@ export default function Signup() {
               <input
                 type="text"
                 className="border-[#666666] border w-full h-14 rounded-xl px-4"
-                value={user.phone}
-                onChange={(e) => setUser({ ...user, phone: e.target.value })}
+                value={user.telephone}
+                onChange={(e) =>
+                  setUser({ ...user, telephone: e.target.value })
+                }
               ></input>
             </div>
 
@@ -145,17 +138,18 @@ export default function Signup() {
             </div>
 
             <div className="flex flex-row justify-between items-center mt-8">
-              <Link href=""></Link>
+              <Link href={"/"}>
               <button
                 className="w-41 h-16 cursor-pointer bg-[#EDCE73] rounded-[40px] text-[22px] font-medium text-white"
                 onClick={() => {
                   handleSignup();
-                  handleS();
+                  addUser();
                   localStorage.setItem("isAuth", true);
                 }}
-              >
-                Sign up
-              </button>
+              > Sign up</button>
+              </Link>
+              
+               
               <p className="text-[16px] text-[#666666]">
                 Already have an account?
                 <Link href="/auth/signin">
