@@ -1,30 +1,37 @@
-
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-export default async function Signin() {
-  function handleChange(e) {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  }
- let wrong  = false;
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+export default function Signin() {
+  const router = useRouter();
+  const [userInfo, setInfo] = useState({
+    email: "",
+    password: "",
+  });
+  const [login, setlogin] = useState(false);
 
-  async function handleS() {
-    const res = await fetch("/api/users", {
-      method: "GET",
+  async function sendUserInf() {
+    const req = await fetch("http://127.0.0.1:8000/users/verify", {
+      method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
       },
-      body: JSON.stringify({
-        email: user.email,
-      }),
-      
+      body: JSON.stringify(userInfo),
     });
-    return await res.json();
+    const data = await req.json();
+
+    if (data.id) {
+      setlogin(true);
+      localStorage.setItem("userData", JSON.stringify(data.user));
+      router.push("/");
+    } else {
+      console.log("wrong password");
+      setlogin(false);
+      console.log(data);
+    }
   }
-  function checkLogin(){
-    const data = handleS();
-    if (data.email === user.email && data.password === user.password) 
-    { wrong = true ;}
-  }
+
   return (
     <>
       <div className="min-h-screen bg-[#F7F5FA] flex flex-col">
@@ -68,6 +75,10 @@ export default async function Signin() {
                   id="email"
                   type="email"
                   placeholder="your@email.com"
+                  value={userInfo.email}
+                  onChange={(e) => {
+                    setInfo({ ...userInfo, email: e.target.value });
+                  }}
                   className="border-2 border-gray-300 w-full h-14 rounded-xl px-4 text-gray-800 focus:border-[#9C4DF4] focus:outline-none focus:ring-2 focus:ring-[#9C4DF4]/20 transition-all"
                 />
               </div>
@@ -82,6 +93,10 @@ export default async function Signin() {
                 <input
                   id="password"
                   type="password"
+                  value={userInfo.password}
+                  onChange={(e) => {
+                    setInfo({ ...userInfo, password: e.target.value });
+                  }}
                   placeholder="••••••••"
                   className="border-2 border-gray-300 w-full h-14 rounded-xl px-4 text-gray-800 focus:border-[#9C4DF4] focus:outline-none focus:ring-2 focus:ring-[#9C4DF4]/20 transition-all"
                 />
@@ -92,21 +107,23 @@ export default async function Signin() {
                   Forgot password?
                 </button>
               </div>
-              
-                <button
-                  type="submit"
-                  className="cursor-pointer w-full h-14 bg-[#EDCE73] hover:bg-[#d7bc6b] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
-                  onClick={
-                    checkLogin
-                  }
-                >
-                  Sign in
-                </button>
-                {wrong ? <>
-                </> : <>
-                wrong password
-                </>}
-             
+
+              <button
+                type="submit"
+                className="cursor-pointer w-full h-14 bg-[#EDCE73] hover:bg-[#d7bc6b] rounded-full text-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 mt-8"
+                onClick={() => {
+                  sendUserInf();
+                }}
+              >
+                Sign in
+              </button>
+              {login ? (
+                () => {
+                  Router.push("/");
+                }
+              ) : (
+                <>wrong password</>
+              )}
 
               <p className="text-center text-base text-gray-600 mt-6">
                 Don't have an account?{" "}
